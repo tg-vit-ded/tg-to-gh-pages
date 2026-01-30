@@ -90,8 +90,30 @@ jobs:
           git config user.name "telegram-mirror-bot"
           git config user.email "telegram-mirror-bot@users.noreply.github.com"
 
-          git add -A docs/data docs/assets docs/feed.xml docs/atom.xml docs/sitemap.xml docs/robots.txt docs/static docs/metrika.js \
-            docs/favicon.ico docs/favicon-32.png docs/apple-touch-icon.png || true
+          add_paths=(
+            docs/data
+            docs/assets
+            docs/static
+            docs/metrika.js
+            docs/favicon.ico
+            docs/favicon-32.png
+            docs/apple-touch-icon.png
+            docs/feed.xml
+            docs/atom.xml
+            docs/sitemap.xml
+            docs/robots.txt
+          )
+
+          existing_paths=()
+          for path in "${add_paths[@]}"; do
+            if [ -e "$path" ]; then
+              existing_paths+=("$path")
+            fi
+          done
+
+          if [ "${#existing_paths[@]}" -gt 0 ]; then
+            git add -A "${existing_paths[@]}"
+          fi
 
           if git diff --cached --quiet; then
             echo "No changes to commit."
