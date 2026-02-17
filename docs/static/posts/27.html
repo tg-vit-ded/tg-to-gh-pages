@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ворчливый IT-дед — пост #27</title>
+  <meta name="description" content=" 12. Надежность    В Яндексе мы много внимания уделяем надежности наших сервисов. За надежность Еды отвечаю, в том числе, я. Но в любой задаче, чтобы преуспеть, надо иногда себя челленджить - &amp;quot;а " />
+  <link rel="icon" href="../../favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32.png" />
+  <link rel="apple-touch-icon" href="../../apple-touch-icon.png" />
+
+  <link rel="canonical" href="https://tg-vit-ded.github.io/tg-to-gh-pages/static/posts/27.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Ворчливый IT-дед — пост #27" />
+  <meta property="og:description" content=" 12. Надежность    В Яндексе мы много внимания уделяем надежности наших сервисов. За надежность Еды отвечаю, в том числе, я. Но в любой задаче, чтобы преуспеть, надо иногда себя челленджить - &amp;quot;а " />
+  <meta property="og:image" content="https://tg-vit-ded.github.io/tg-to-gh-pages/assets/media/thumbs/27_480.webp" />
+  <meta property="og:image:alt" content="Ворчливый IT-дед" />
+  <meta property="article:published_time" content="2025-06-06T06:59:52+00:00" />
+  <meta property="article:author" content="Ворчливый IT-дед" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://tg-vit-ded.github.io/tg-to-gh-pages/assets/media/thumbs/27_480.webp" />
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="../../metrika.js"></script>
+</head>
+<body data-index-href="../page-6.html">
+  <header class="header">
+    <div class="container">
+      <div class="title-grid single-title">
+        <a class="grid-avatar" href="#" target="_blank" rel="noopener">
+          <img id="channelAvatar" class="channel-avatar" src="../../assets/channel_avatar.jpg" alt="Аватар канала"  />
+        </a>
+        <div class="grid-main">
+          <div class="title-head">
+            <a class="back-link" href="../page-6.html">← Ко всем постам</a>
+            <a class="badge-chip" id="siteTitleWrap" href="#" target="_blank" rel="noopener"><h1 id="siteTitle">Ворчливый IT-дед</h1></a>
+            <div class="hero-actions">
+              <a id="subscribeBtn" class="subscribe-btn" href="https://t.me/vit_ded" target="_blank" rel="noopener" >Подписаться</a>
+              <a class="icon-btn" href="../../post.html?id=27" aria-label="Открыть динамическую страницу поста">↺</a>
+              <button id="themeToggle" class="icon-btn" type="button" aria-label="Переключить тему"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  
+
+  <main class="container single-page">
+    <article id="postContainer" class="post post-page" data-post-id="27">
+      <div class="post-header">
+        <div class="right"><span class="post-date" data-iso-date="2025-06-06T06:59:52+00:00">2025-06-06 06:59 UTC</span></div>
+      </div>
+      <div class="post-body"><strong>12. Надежность</strong> <br><br>В Яндексе мы много внимания уделяем надежности наших сервисов. За надежность Еды отвечаю, в том числе, я. Но в любой задаче, чтобы преуспеть, надо иногда себя челленджить - &quot;а не фигней ли я занимаюсь?&quot;. Поэтому давайте на минутку перевернем все с ног на голову и доведем до абсурда (а может, и нет?).<br><br>Мой сегодняшний тезис - надежностью заниматься не надо.<br><br>Введем несколько определений. Аптайм - доля работоспособности сервиса. Можно измерять в процентах от времени, а можно - в процентах от заказов, если ваш сервис транзакционный. Можно и в кодах ответов хттп-сервисов - 5хх/(2хх+5хх), кому как нравится. На мораль это не повлияет. В индустрии считается, что если у тебя аптайм 99.99% (ака четыре девятки), ты максимальный красавчик. Если 99.9% (три девятки) - норм, пойдет. Если ниже - ну такое. Среднее значение в 99.95% опустим, на логику повествования не влияет.<br><br>Предположим, мы работаем в крупной компании с хорошей инфраструктурой, в команде сильные инженеры, все базовые процессы выстроены и работают исправно. В этом случае держать аптайм в три девятки не составляет особого труда - надо просто не забивать уж совсем на это дело. А вот чтобы достичь четырех девяток, надо нормально так упороться в надежность - вам нельзя лежать больше минуты в неделю! Придется завести отдельных SRE, дрючить команды за 5хх и долгие запросы, внедрять практики прогрессивного инцидент-менеджмента, учений, прогрузок и прочих превентивных штук. Ну вы знаете (надеюсь).<br><br>И этими усилиями вы можете поднять надежность в 10 раз - терять не 0.1% аптайма (заказов), а 0.01%.<br><br>А теперь продолжим мысленный эксперимент. Напомню, мы работаем в крупной компании с хорошей инфраструктурой. Очевидно, мы все новые фичи запускаем через А/Б-эксперименты. И вот предположим, что некая команда сделала классную фичу. Фича всем нравится, упрощает поддержку сервиса, экономит какие-то деньги операционно, всем классная. Но вот незадача - заказы в экспе падают на 0.1%. Вот вопрос к продактам и аналитикам - примем мы такой эксперимент? Раскатим на сотку? Прокрасит ли такое падение эксп в красный, или сочтем погрешностью? Мне кажется, во многих случаях мы этот эксп примем с радостью, фича то классная.<br><br>Эта фича называется &quot;ненадежность&quot;. Экономит уйму усилий команд, а значит - они смогут больше заниматься продуктом. Сокращает тайм-ту-маркет, а значит - снижает кост-оф-дилей. Ритеншн не должен ухудшиться, все же три девятки имиджево не должны быть сильно заметны. Плохо что ли? Хорошо! Viva la revolution! А вы что скажете?<div class="media"><img class="media-img" loading="lazy" src="../../assets/media/thumbs/27_480.webp" srcset="../../assets/media/thumbs/27_480.webp 480w, ../../assets/media/27.jpg 1200w" sizes="(max-width: 768px) 100vw, 800px" alt="" data-post-id="27" data-image-index="0" /></div></div>
+      <div class="actions">
+        <span>489 просмотров · 7 реакций</span>
+        <span class="action-links"><a href="https://t.me/vit_ded/27" target="_blank" rel="noopener">Открыть в Telegram</a> · <a href="../page-6.html">К списку постов</a> · <a href="./27.html">Ссылка на этот пост</a></span>
+      </div>
+    </article>
+
+    <div class="pager single-nav">
+      <a id="prevPost" class="nav-link" href="./28.html" style="visibility:visible">← Более новый</a>
+      <a id="nextPost" class="nav-link" href="./26.html" style="visibility:visible">Более старый →</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span>based on <a href="https://github.com/ml-brand/tg-to-gh-pages" target="_blank" rel="noopener">tg-to-gh-pages</a> (created by <a href="https://github.com/ml-brand" target="_blank" rel="noopener">ML Brand</a>)</span>
+        <a id="repoLink" href="https://github.com/ml-brand/tg-to-gh-pages" target="_blank" rel="noopener">Do the same with your channel.</a>
+        <span class="footer-links">
+          static copy ·
+          <a href="../../feed.xml" target="_blank" rel="noopener">RSS</a> ·
+          <a href="../../atom.xml" target="_blank" rel="noopener">Atom</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.__STATIC_POSTS = [{"id": 27, "media": [{"kind": "photo", "path": "../../assets/media/27.jpg", "thumb": "../../assets/media/thumbs/27_480.webp", "size": 118612, "mime": "image/jpeg", "name": null}]}];
+    window.__STATIC_META = {"title": "Ворчливый IT-дед", "username": "vit_ded", "channel": "vit_ded", "last_sync_utc": "2026-02-17T09:23:50Z", "posts_count": 164, "last_seen_message_id": 280, "stats": {"new": 267, "updated": 0, "media_downloaded": 255}, "avatar": "assets/channel_avatar.jpg", "meta_schema_version": "1.0.0", "posts_schema_version": "1.0.0"};
+  </script>
+  <script src="../../common.js"></script>
+  <script src="../../static.js"></script>
+</body>
+</html>

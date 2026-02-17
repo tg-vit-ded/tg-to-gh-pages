@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ворчливый IT-дед — пост #189</title>
+  <meta name="description" content=" Все яйца в одну корзину    Как я уже  упоминал , на дарксторах Лавки происходит множество удивительных операционных процессов. Например,  переборка яиц . Как минимум такую строчку я видел в одной из " />
+  <link rel="icon" href="../../favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32.png" />
+  <link rel="apple-touch-icon" href="../../apple-touch-icon.png" />
+
+  <link rel="canonical" href="https://tg-vit-ded.github.io/tg-to-gh-pages/static/posts/189.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Ворчливый IT-дед — пост #189" />
+  <meta property="og:description" content=" Все яйца в одну корзину    Как я уже  упоминал , на дарксторах Лавки происходит множество удивительных операционных процессов. Например,  переборка яиц . Как минимум такую строчку я видел в одной из " />
+  <meta property="og:image" content="https://tg-vit-ded.github.io/tg-to-gh-pages/assets/media/thumbs/189_480.webp" />
+  <meta property="og:image:alt" content="Ворчливый IT-дед" />
+  <meta property="article:published_time" content="2025-12-12T07:10:27+00:00" />
+  <meta property="article:author" content="Ворчливый IT-дед" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://tg-vit-ded.github.io/tg-to-gh-pages/assets/media/thumbs/189_480.webp" />
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="../../metrika.js"></script>
+</head>
+<body data-index-href="../page-2.html">
+  <header class="header">
+    <div class="container">
+      <div class="title-grid single-title">
+        <a class="grid-avatar" href="#" target="_blank" rel="noopener">
+          <img id="channelAvatar" class="channel-avatar" src="../../assets/channel_avatar.jpg" alt="Аватар канала"  />
+        </a>
+        <div class="grid-main">
+          <div class="title-head">
+            <a class="back-link" href="../page-2.html">← Ко всем постам</a>
+            <a class="badge-chip" id="siteTitleWrap" href="#" target="_blank" rel="noopener"><h1 id="siteTitle">Ворчливый IT-дед</h1></a>
+            <div class="hero-actions">
+              <a id="subscribeBtn" class="subscribe-btn" href="https://t.me/vit_ded" target="_blank" rel="noopener" >Подписаться</a>
+              <a class="icon-btn" href="../../post.html?id=189" aria-label="Открыть динамическую страницу поста">↺</a>
+              <button id="themeToggle" class="icon-btn" type="button" aria-label="Переключить тему"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  
+
+  <main class="container single-page">
+    <article id="postContainer" class="post post-page" data-post-id="189">
+      <div class="post-header">
+        <div class="right"><span class="post-date" data-iso-date="2025-12-12T07:10:27+00:00">2025-12-12 07:10 UTC</span></div>
+      </div>
+      <div class="post-body"><strong>Все яйца в одну корзину</strong> <br><br>Как я уже <a href="https://t.me/vit_ded/173" rel="nofollow noopener noreferrer">упоминал</a>, на дарксторах Лавки происходит множество удивительных операционных процессов. Например, <strong>переборка яиц</strong>. Как минимум такую строчку я видел в одной из волшебных экселек. Я пока не убедился, что это именно то, что я себе представил, но предположим, что суть процесса в том, чтобы перекомплектовать лотки так, чтобы не продавать разбитые яйца.<br><br>А это неплохая задачка для собеседований или контестов - подумал я. И попытался решить ее. Вообще я обычно не люблю, когда в условия алгоритмических задачек добавляют каких-то неуместных лирических героев и прочий сторителлинг - обычно он выглядит натянутым. Тут - другое дело, тут сама задачка рождается из физического мира, а это мы любим. Сформулируем задачку так:<br><br><em>Написать функцию, которая на вход принимает строку. В строке последовательности нулей (целое яйцо) и единиц (битое яйцо) по 10 в ряд (лоток вмещает 10 яиц) разделены пробелами (считаем, что входные данные корректны). На выходе нужно в аналогичном формате получить лотки так, чтобы в начале строки были все целые, в правой - битые, а также количество лотков, которые можно считать товарными (содержащие только целые яйца).<br>Пример: </em><br><code>&#x27;0101010101 1010101010 0101010101&#x27; -&gt; &#x27;0000000000 0000011111 1111111111&#x27;, 1.</code><br><br>Сначала подойдем к решению этой задачки в классической алгоритмической парадигме - в один проход двумя встречными итераторами со свапом. Оказалось, тут не так мало корнер-кейсов, как казалось. Тем не менее, получаем какое-то такое решение:<br><pre><br>    <code class="language-python"><br>        <br>def eggs(s):<br>        lst = list(s)<br>        i, j, full = 0, len(lst)-1, 0<br>        while (lst[j] == &#x27;1&#x27; or lst[j] == &#x27; &#x27;) and j &gt;= 0:<br>                j -= 1<br>        while i&lt;j:<br>                if lst[i] == &#x27; &#x27;:<br>                        full += 1<br>                elif lst[i] == &#x27;1&#x27;:<br>                        lst[i], lst[j] = lst[j], lst[i]<br>                        j -= 1<br>                        while (lst[j] == &#x27;1&#x27; or lst[j] == &#x27; &#x27;) and j&gt;i:<br>                                j -= 1<br>                i += 1<br>        if i == len(lst)-1 or lst[i] == &#x27; &#x27;:<br>                full +=1<br>        return &#x27;&#x27;.join(lst), full{}<br>    </code><br></pre><br><br>Не самое элегантное и читаемое. Любой олимпиадник тут же сочтет это решение довольно наивным и предложит альтернативу. Особенно если мы еще и целимся в правила код-гольфа (кто не знает - это такой вид контеста, где нужно решить задачу наименьшим количеством символов кода). Например, в таком духе (тут я осознанно не пускаюсь в лишние оптимизации и сокращения, чтобы сохранить хоть толику читаемости. Это в контестах/код-гольфе код чисто write-only, а мы тут просто балуемся):<br><pre><br>    <code class="language-python"><br>        <br>def eggs(s):<br>        solid = s.count(&#x27;0&#x27;)<br>        full = solid // 10<br>        res_full = (&#x27;0&#x27; * 10 + &#x27; &#x27;) * full<br>        res_mixed = &#x27;0&#x27; * (solid % 10) + &#x27;1&#x27; * (10 - (solid % 10 if solid % 10 else 10))<br>        res_broken = (&#x27; &#x27; + &#x27;1&#x27; * 10) * (len(s.split()) - full - (1 if res_mixed else 0))<br>        if not res_mixed:<br>                res_broken = res_broken.lstrip()<br>        return (res_full + res_mixed + res_broken).strip(), full<br>{}<br>    </code><br></pre><br><br>Однако, представим себе на минутку, что наш код будет исполняться не на <strong>кремниевых кристаллах</strong>, а на <strong>органических соединениях</strong> с костями и кожей. И кладовщик не может в моменте подбросить все несколько десятков яиц в воздух и поймать их в правильные ячейки. Так что возвращаемся к первому решению и начинаем его <strong>операционно</strong> оптимизировать, чтобы избежать лишних перекладываний, например, в случае целиком битых лотков. Но это уже - другая история.<br><br>P.S. Я сомневаюсь, что мы правда пишем алгоритмы таких ручных операций. Этот пост - лишь еще одно метафорическое описание отличий операционного продукта от pure-digital.<br>P.P.S. На всякий случай оставлю тесткейсы для задачки - <a href="https://telegra.ph/tests-12-09-3" rel="nofollow noopener noreferrer">https://telegra.ph/tests-12-09-3</a>. Кто напишет в комментариях самое короткое решение (по правилам код-гольфа), получит от меня в личку мой любимый стикерпак и ссылку на вакансии)<div class="media"><img class="media-img" loading="lazy" src="../../assets/media/thumbs/189_480.webp" srcset="../../assets/media/thumbs/189_480.webp 480w, ../../assets/media/189.jpg 1200w" sizes="(max-width: 768px) 100vw, 800px" alt="" data-post-id="189" data-image-index="0" /></div></div>
+      <div class="actions">
+        <span>802 просмотров · 10 реакций</span>
+        <span class="action-links"><a href="https://t.me/vit_ded/189" target="_blank" rel="noopener">Открыть в Telegram</a> · <a href="../page-2.html">К списку постов</a> · <a href="./189.html">Ссылка на этот пост</a></span>
+      </div>
+    </article>
+
+    <div class="pager single-nav">
+      <a id="prevPost" class="nav-link" href="./190.html" style="visibility:visible">← Более новый</a>
+      <a id="nextPost" class="nav-link" href="./186.html" style="visibility:visible">Более старый →</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span>based on <a href="https://github.com/ml-brand/tg-to-gh-pages" target="_blank" rel="noopener">tg-to-gh-pages</a> (created by <a href="https://github.com/ml-brand" target="_blank" rel="noopener">ML Brand</a>)</span>
+        <a id="repoLink" href="https://github.com/ml-brand/tg-to-gh-pages" target="_blank" rel="noopener">Do the same with your channel.</a>
+        <span class="footer-links">
+          static copy ·
+          <a href="../../feed.xml" target="_blank" rel="noopener">RSS</a> ·
+          <a href="../../atom.xml" target="_blank" rel="noopener">Atom</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.__STATIC_POSTS = [{"id": 189, "media": [{"kind": "photo", "path": "../../assets/media/189.jpg", "thumb": "../../assets/media/thumbs/189_480.webp", "size": 94703, "mime": "image/jpeg", "name": null}]}];
+    window.__STATIC_META = {"title": "Ворчливый IT-дед", "username": "vit_ded", "channel": "vit_ded", "last_sync_utc": "2026-02-17T09:23:50Z", "posts_count": 164, "last_seen_message_id": 280, "stats": {"new": 267, "updated": 0, "media_downloaded": 255}, "avatar": "assets/channel_avatar.jpg", "meta_schema_version": "1.0.0", "posts_schema_version": "1.0.0"};
+  </script>
+  <script src="../../common.js"></script>
+  <script src="../../static.js"></script>
+</body>
+</html>

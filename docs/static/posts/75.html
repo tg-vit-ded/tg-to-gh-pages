@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ворчливый IT-дед — пост #75</title>
+  <meta name="description" content=" Про BDUI   Не будем уходить далеко от темы backend-driven-UI и попробуем разобраться, хорошо это или плохо. Но сначала - краткий исторический экскурс в бдуй Яндекс Еды.  Когда я пришел в Еду в начале" />
+  <link rel="icon" href="../../favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32.png" />
+  <link rel="apple-touch-icon" href="../../apple-touch-icon.png" />
+
+  <link rel="canonical" href="https://tg-vit-ded.github.io/tg-to-gh-pages/static/posts/75.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Ворчливый IT-дед — пост #75" />
+  <meta property="og:description" content=" Про BDUI   Не будем уходить далеко от темы backend-driven-UI и попробуем разобраться, хорошо это или плохо. Но сначала - краткий исторический экскурс в бдуй Яндекс Еды.  Когда я пришел в Еду в начале" />
+  <meta property="og:image" content="https://tg-vit-ded.github.io/tg-to-gh-pages/assets/media/thumbs/75_480.webp" />
+  <meta property="og:image:alt" content="Ворчливый IT-дед" />
+  <meta property="article:published_time" content="2025-08-06T06:59:33+00:00" />
+  <meta property="article:author" content="Ворчливый IT-дед" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://tg-vit-ded.github.io/tg-to-gh-pages/assets/media/thumbs/75_480.webp" />
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="../../metrika.js"></script>
+</head>
+<body data-index-href="../page-4.html">
+  <header class="header">
+    <div class="container">
+      <div class="title-grid single-title">
+        <a class="grid-avatar" href="#" target="_blank" rel="noopener">
+          <img id="channelAvatar" class="channel-avatar" src="../../assets/channel_avatar.jpg" alt="Аватар канала"  />
+        </a>
+        <div class="grid-main">
+          <div class="title-head">
+            <a class="back-link" href="../page-4.html">← Ко всем постам</a>
+            <a class="badge-chip" id="siteTitleWrap" href="#" target="_blank" rel="noopener"><h1 id="siteTitle">Ворчливый IT-дед</h1></a>
+            <div class="hero-actions">
+              <a id="subscribeBtn" class="subscribe-btn" href="https://t.me/vit_ded" target="_blank" rel="noopener" >Подписаться</a>
+              <a class="icon-btn" href="../../post.html?id=75" aria-label="Открыть динамическую страницу поста">↺</a>
+              <button id="themeToggle" class="icon-btn" type="button" aria-label="Переключить тему"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  
+
+  <main class="container single-page">
+    <article id="postContainer" class="post post-page" data-post-id="75">
+      <div class="post-header">
+        <div class="right"><span class="post-date" data-iso-date="2025-08-06T06:59:33+00:00">2025-08-06 06:59 UTC</span></div>
+      </div>
+      <div class="post-body"><strong>Про BDUI</strong><br><br>Не будем уходить далеко от темы backend-driven-UI и попробуем разобраться, хорошо это или плохо. Но сначала - краткий исторический экскурс в бдуй Яндекс Еды.<br><br>Когда я пришел в Еду в начале 2021 года, BDUI уже был. Но простенький такой, на минималках. Можно было через так называемый Layout Constructor задавать с бекенда вид некоторых экранов (в первую очередь - главной страницы с каталогом). Было понятие блоков/виджетов. Это было нужно для того, чтобы продакт мог сам немного поменять вид главной в поисках оптимального сетапа. Мог запустить эксперимент с альтернативной главной на сегмент аудитории без кода. Мог развести фичи по сегментам или географиям. Но вот незадача - админка была написана чужими для хищников, и пользоваться ей умело 2-3 человека.<br><br>Поэтому появилась вторая генерация  - с Layout Configurator-ом и виджетами-без-кода. Тут уже все было по-людски, плюс реализация логики виджетов стала выезжать из LC, в котором можно было через админку задать правила обхода источников и формирования выдачи из их ответов. Хорошее проявление лоу-код/ноу-код подхода. Без всякого там богомерзкого ИИ.<br><br>Но вскоре подоспела третья генерация на основе решения &quot;FLEX&quot;, зародившегося в Маркете. Тут уже совсем другие пироги - с бекенда можно задавать не только сетку виджетов, но и сами виджеты, включая верстку, экшны, навигацию. Клиент становится тоньше - по сути для отрисовки экрана достаточно SDK, а логика и верстка пишутся на бекенде на Котлине (впрочем, как я понимаю, от котлина там по сути только синтаксис, потому что все равно все примитивы там от фреймворка).<br><br>Чем это хорошо?<br>Во-первых, вы пишете фичу 1 раз на обе платформы (а будет вебная реализация - так вообще под все 3). Значит, команда сможет выдавать в полтора-два раза больше фичей в единицу времени тем же составом. Еще и поведение продукта будет консистентным между платформами.<br>Во-вторых, для доставки фичи до юзеров достаточно релиза бекенда. Никакого релизного цикла, никакого хвоста старых версий. Это ли не то, почему фронты всегда завидовали бекендерам? Фиксы, кстати, тоже доезжают сразу и до всех.<br><br>А минусы будут? Куда без них.<br>Во-первых, сокращается гибкость, особенно в вопросах сложных визуалов. Не может такой фреймворк уметь во все те фишечки, что заложены в натив вендором платформы. Всякие красивости-анимации, всякие глубоко-платформенные look&amp;feel особенности (в большей степени характерные для ios) в таких SDK по большей части недоступны. Но не беда - всегда же можно оставить какие-то части, где это важно, нативными. Или допилить SDK.<br>Во-вторых, некоторые разработчики слишком сильно любят те самые нативные фишечки и не хотят уходить в бекендно-фреймворковую разработку. Типа это не то. Ну камон, если ты - в первую очередь, инженер, то ты должен понимать, что это более эффективный способ достигать целей. Это инструмент, который про make things done, про результат. Кому важнее процесс - такая работа тоже никуда не денется. Или пилить сам SDK.<br><br>Есть и другие плюсы-минусы, можете дополнять меня в комментариях. Но конъюнктура момента такова, что бизнесу нужен bdui, а мы тут как бы зарплату за это все получаем. Так что не ворчим и пилим фичи!<div class="media"><img class="media-img" loading="lazy" src="../../assets/media/thumbs/75_480.webp" srcset="../../assets/media/thumbs/75_480.webp 480w, ../../assets/media/75.jpg 1200w" sizes="(max-width: 768px) 100vw, 800px" alt="" data-post-id="75" data-image-index="0" /></div></div>
+      <div class="actions">
+        <span>512 просмотров · 22 реакций</span>
+        <span class="action-links"><a href="https://t.me/vit_ded/75" target="_blank" rel="noopener">Открыть в Telegram</a> · <a href="../page-4.html">К списку постов</a> · <a href="./75.html">Ссылка на этот пост</a></span>
+      </div>
+    </article>
+
+    <div class="pager single-nav">
+      <a id="prevPost" class="nav-link" href="./76.html" style="visibility:visible">← Более новый</a>
+      <a id="nextPost" class="nav-link" href="./74.html" style="visibility:visible">Более старый →</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span>based on <a href="https://github.com/ml-brand/tg-to-gh-pages" target="_blank" rel="noopener">tg-to-gh-pages</a> (created by <a href="https://github.com/ml-brand" target="_blank" rel="noopener">ML Brand</a>)</span>
+        <a id="repoLink" href="https://github.com/ml-brand/tg-to-gh-pages" target="_blank" rel="noopener">Do the same with your channel.</a>
+        <span class="footer-links">
+          static copy ·
+          <a href="../../feed.xml" target="_blank" rel="noopener">RSS</a> ·
+          <a href="../../atom.xml" target="_blank" rel="noopener">Atom</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.__STATIC_POSTS = [{"id": 75, "media": [{"kind": "photo", "path": "../../assets/media/75.jpg", "thumb": "../../assets/media/thumbs/75_480.webp", "size": 36784, "mime": "image/jpeg", "name": null}]}];
+    window.__STATIC_META = {"title": "Ворчливый IT-дед", "username": "vit_ded", "channel": "vit_ded", "last_sync_utc": "2026-02-17T09:23:50Z", "posts_count": 164, "last_seen_message_id": 280, "stats": {"new": 267, "updated": 0, "media_downloaded": 255}, "avatar": "assets/channel_avatar.jpg", "meta_schema_version": "1.0.0", "posts_schema_version": "1.0.0"};
+  </script>
+  <script src="../../common.js"></script>
+  <script src="../../static.js"></script>
+</body>
+</html>
