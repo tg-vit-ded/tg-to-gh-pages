@@ -7420,7 +7420,7 @@
     "html": "<strong>200 OK</strong> <br><br>Телеграм - отличный мессенджер и площадка для контента. Но есть некоторые <strong>нюансы</strong>. Например, паршивая индексация поисковиками. А еще его не читают те, кто принципиально пользуется только мессенджером MAX.<br><br>Поэтому мои коллеги из Yandex ML Brand запилили <strong>зеркалирование</strong> тг-каналов на github pages. Во-первых, это красиво. Во-вторых, теперь у этой колонки тоже есть <strong>вебная</strong> инкарнация - <a href=\"https://tg-vit-ded.github.io/tg-to-gh-pages/\" rel=\"nofollow noopener noreferrer\">https://tg-vit-ded.github.io/tg-to-gh-pages/</a><br><br>Работает просто, эффективно и надежно - пушишь репо, сохраняешь в секретах телеграмовские api_id, api_hash, генерируешь скриптом сессию, указываешь в переменных окружения канал, далее через github actions запускается периодический воркфлоу синхронизации, страница сервится на github pages. Умеет в статику, роботс, рсс/атом. <strong>Спасибо</strong> ребятам (и лично Пете) за такой крутой проект.<br><br><em>All credits to </em><a href=\"https://github.com/ml-brand/tg-to-gh-pages\" rel=\"nofollow noopener noreferrer\"><em>https://github.com/ml-brand/tg-to-gh-pages</em></a>",
     "link": "https://t.me/vit_ded/281",
     "type": "photo",
-    "views": 440,
+    "views": 441,
     "forwards": 9,
     "grouped_id": null,
     "media": [
