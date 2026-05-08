@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ворчливый IT-дед — пост #403</title>
+  <meta name="description" content=" Магия вне Хогвардса, или Дед вайбкодит, pt.2    В предыдущем посте  вы могли прочитать либретто сна при температуре 39 после дня вайбкодинга. Но если  в прошлый раз   я делал простейшее сложение чисе" />
+  <link rel="icon" href="../../favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32.png" />
+  <link rel="apple-touch-icon" href="../../apple-touch-icon.png" />
+
+  <link rel="canonical" href="https://tg-vit-ded.github.io/tg-to-gh-pages/static/posts/403.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Ворчливый IT-дед — пост #403" />
+  <meta property="og:description" content=" Магия вне Хогвардса, или Дед вайбкодит, pt.2    В предыдущем посте  вы могли прочитать либретто сна при температуре 39 после дня вайбкодинга. Но если  в прошлый раз   я делал простейшее сложение чисе" />
+  <meta property="og:image" content="https://tg-vit-ded.github.io/tg-to-gh-pages/assets/media/thumbs/403_480.webp" />
+  <meta property="og:image:alt" content="Ворчливый IT-дед" />
+  <meta property="article:published_time" content="2026-05-08T07:31:03+00:00" />
+  <meta property="article:author" content="Ворчливый IT-дед" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://tg-vit-ded.github.io/tg-to-gh-pages/assets/media/thumbs/403_480.webp" />
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="../../metrika.js"></script>
+</head>
+<body data-index-href="../index.html">
+  <header class="header">
+    <div class="container">
+      <div class="title-grid single-title">
+        <a class="grid-avatar" href="#" target="_blank" rel="noopener">
+          <img id="channelAvatar" class="channel-avatar" src="../../assets/channel_avatar.jpg" alt="Аватар канала"  />
+        </a>
+        <div class="grid-main">
+          <div class="title-head">
+            <a class="back-link" href="../index.html">← Ко всем постам</a>
+            <a class="badge-chip" id="siteTitleWrap" href="#" target="_blank" rel="noopener"><h1 id="siteTitle">Ворчливый IT-дед</h1></a>
+            <div class="hero-actions">
+              <a id="subscribeBtn" class="subscribe-btn" href="https://t.me/vit_ded" target="_blank" rel="noopener" >Подписаться</a>
+              <a class="icon-btn" href="../../post.html?id=403" aria-label="Открыть динамическую страницу поста">↺</a>
+              <button id="themeToggle" class="icon-btn" type="button" aria-label="Переключить тему"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  
+
+  <main class="container single-page">
+    <article id="postContainer" class="post post-page" data-post-id="403">
+      <div class="post-header">
+        <div class="right"><span class="post-date" data-iso-date="2026-05-08T07:31:03+00:00">2026-05-08 07:31 UTC</span></div>
+      </div>
+      <div class="post-body"><strong>Магия вне Хогвардса, или Дед вайбкодит, pt.2<br></strong><br><a href="https://t.me/vit_ded/402" rel="nofollow noopener noreferrer">В предыдущем посте</a> вы могли прочитать либретто сна при температуре 39 после дня вайбкодинга. Но если <a href="https://t.me/vit_ded/386" rel="nofollow noopener noreferrer">в прошлый раз</a>  я делал простейшее сложение чисел, то теперь решил посмотреть, как ИИшка справится с более полноценным проектом. Скажем так - да, справилась. Да, работает. Да, быстро. Но, как водится, есть нюанс.<br><br>На этот раз задачка была довольно прикладная - сделать механизм вычислений по заданной юзером формуле над определенным набором переменных (для подписчиков из Еды: типа js-пайплайнов). Библиотека для интерпретации формулы и вычислений, демо-сервер для запуска, веб-интрефейс для задания формулы и значений переменных. В целом - не рокет-саенс, но для опытов пойдет, ибо тут и фронт, и бек, и алгосы, чуть математики, можно собрать много фактуры.<br><br>Из позитивного. На создание проекта от начала написания промта до первого прототипа, с 5 метров похожего на результат, ушло 2.5 часа и токенов на 3 доллара. Без ИИ - слабодостижимый результат. Еще клод написал хорошую ридмишку, и в целом по ходу давал хорошие и понятные подсказки, например, из области эксплуатации - как запускать, как протестить.<br><br>А дальше странности. После составления плана и моего аппрува, клод долго шуршал, постоянно спрашивая одобрения на запуск разных команд в шелле, периодически запрашивая абсурдные системные пермишены (например, к apple music), но с написанием кода справился. Как минимум, он так считал. Правда, в конце он сознался, что на тачке не установлены go и node.js, поэтому писал он это все с каменным лицом &quot;вслепую&quot; и проверить не смог. Но я могу сам поставить так-то и так-то. Блин, ну если ты и так от моего имени запускал столько шелл-команд, не мог уже сам поставить? Ладно, установил. Запускаю по инструкции из ридми make run - сюрприз - не компилируется. Ха.<br><br>Отчитался клоду, что я поставил ему го и ноду, предложил как-то доделать работу нормально, а не на отвали. Он снова надолго ушел шуршать, но на этот раз все сделал нормально. Занятно было наблюдать, как в процессе он находил свои ошибки и исправлял их. Типа &quot;ой, оказывается было плохой идеей назвать бинарь demo, потому что я тут уже создал папку для сорцов с таким же названием&quot;. А типа сразу он этого не мог понять? Мне казалось, что ИИ как раз за счет контекста такие человеческие ошибки не делает.<br><br>Модель снова кучу всего додумала сама, вместо того, чтобы нормально переспросить у меня. Я ж тут для того и сижу, чтобы уточнять требования. Только хотелось бы делать это по ходу реализации, а не в конце, когда я сам нахожу какие-то ее фантазии. Вот зачем эта штука решила сортировать переменные в веб-интрефейсе в алфавитном порядке? Требования такого не было, а если бы она спросила - я бы предложил их сортировать по типу данных, сначала инты, потом булы.<br><br>Фронтенд получился, на мой вкус, переусложненным. Я, может, сам виноват в том, что в промте предложил реакт, но не надо было сразу делать spa и гору наворотов ради интерфейса с 1 кнопкой и 2 состояниями.<br><br>Вообще код вышел не фонтан. Много намудрил с декларацией типов переменных для формулы, много какого-то нейрослопа типа функций, просто вызывающих другую функцию и больше ничего, какие-то абстракции ради абстракций. И при этом дофига однобуквенных переменных. А часть логики явно можно было бы не писать самому, а взять какие-то околостандартные конструкции языка или общепринятые библиотеки. Стиль оформления тестов - вообще мрак, никакой логике не подчиняется. Я бы такое на ревью завернул.<br><br>Кстати, о ревью. На вычитывание кода у меня ушло столько же времени, сколько на все остальное - больше 2 часов. Итого, около часа я писал промт, час оно шуршало, полчаса на пусконаладку, и 2 с лишним часа на ревью. Мораль - теперь, видимо, нужно в первую очередь оптимизировать код-ревью. Хотя тут назревает философская дилемма: а если предположить, что в дальнейшем этот код буду дорабатывать не я, а снова ИИ, может и не нужно ничего ревьювить? И код должен быть понятен не мне, а ИИ? Работает - не трогай?<div class="media"><img class="media-img" loading="lazy" src="../../assets/media/thumbs/403_480.webp" srcset="../../assets/media/thumbs/403_480.webp 480w, ../../assets/media/403.jpg 1200w" sizes="(max-width: 768px) 100vw, 800px" alt="" data-post-id="403" data-image-index="0" /><img class="media-img" loading="lazy" src="../../assets/media/thumbs/404_480.webp" srcset="../../assets/media/thumbs/404_480.webp 480w, ../../assets/media/404.jpg 1200w" sizes="(max-width: 768px) 100vw, 800px" alt="" data-post-id="403" data-image-index="1" /></div></div>
+      <div class="actions">
+        <span>98 просмотров · 1 реакций</span>
+        <span class="action-links"><a href="https://t.me/vit_ded/403" target="_blank" rel="noopener">Открыть в Telegram</a> · <a href="../index.html">К списку постов</a> · <a href="./403.html">Ссылка на этот пост</a></span>
+      </div>
+    </article>
+
+    <div class="pager single-nav">
+      <a id="prevPost" class="nav-link disabled" href="#" style="visibility:hidden">← Более новый</a>
+      <a id="nextPost" class="nav-link" href="./402.html" style="visibility:visible">Более старый →</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span>based on <a href="https://github.com/ml-brand/tg-to-gh-pages" target="_blank" rel="noopener">tg-to-gh-pages</a> (created by <a href="https://github.com/ml-brand" target="_blank" rel="noopener">ML Brand</a>)</span>
+        <a id="repoLink" href="https://github.com/ml-brand/tg-to-gh-pages" target="_blank" rel="noopener">Do the same with your channel.</a>
+        <span class="footer-links">
+          static copy ·
+          <a href="../../feed.xml" target="_blank" rel="noopener">RSS</a> ·
+          <a href="../../atom.xml" target="_blank" rel="noopener">Atom</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.__STATIC_POSTS = [{"id": 403, "media": [{"kind": "photo", "path": "../../assets/media/403.jpg", "thumb": "../../assets/media/thumbs/403_480.webp", "size": 70481, "mime": "image/jpeg", "name": null}, {"kind": "photo", "path": "../../assets/media/404.jpg", "thumb": "../../assets/media/thumbs/404_480.webp", "size": 65532, "mime": "image/jpeg", "name": null}]}];
+    window.__STATIC_META = {"title": "Ворчливый IT-дед", "username": "vit_ded", "channel": "vit_ded", "last_sync_utc": "2026-05-08T08:14:05Z", "posts_count": 215, "last_seen_message_id": 404, "stats": {"new": 121, "updated": 16, "media_downloaded": 121}, "avatar": "assets/channel_avatar.jpg", "meta_schema_version": "1.0.0", "posts_schema_version": "1.0.0"};
+  </script>
+  <script src="../../common.js"></script>
+  <script src="../../static.js"></script>
+</body>
+</html>
