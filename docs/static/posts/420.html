@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ворчливый IT-дед — пост #420</title>
+  <meta name="description" content=" Робо-Лавка      Как я  уже упоминал , мы в Лавке активно занимаемся роботизацией наших операционных процессов. Про новости робо-доставки тоже  недавно пробрасывал . А еще у нас идет пилот проекта роб" />
+  <link rel="icon" href="../../favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32.png" />
+  <link rel="apple-touch-icon" href="../../apple-touch-icon.png" />
+
+  <link rel="canonical" href="https://tg-vit-ded.github.io/tg-to-gh-pages/static/posts/420.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Ворчливый IT-дед — пост #420" />
+  <meta property="og:description" content=" Робо-Лавка      Как я  уже упоминал , мы в Лавке активно занимаемся роботизацией наших операционных процессов. Про новости робо-доставки тоже  недавно пробрасывал . А еще у нас идет пилот проекта роб" />
+  <meta property="og:image" content="https://tg-vit-ded.github.io/tg-to-gh-pages/assets/media/420_amr.mp4" />
+  <meta property="og:image:alt" content="Ворчливый IT-дед" />
+  <meta property="article:published_time" content="2026-06-11T07:07:55+00:00" />
+  <meta property="article:author" content="Ворчливый IT-дед" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://tg-vit-ded.github.io/tg-to-gh-pages/assets/media/420_amr.mp4" />
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="../../metrika.js"></script>
+</head>
+<body data-index-href="../index.html">
+  <header class="header">
+    <div class="container">
+      <div class="title-grid single-title">
+        <a class="grid-avatar" href="#" target="_blank" rel="noopener">
+          <img id="channelAvatar" class="channel-avatar" src="../../assets/channel_avatar.jpg" alt="Аватар канала"  />
+        </a>
+        <div class="grid-main">
+          <div class="title-head">
+            <a class="back-link" href="../index.html">← Ко всем постам</a>
+            <a class="badge-chip" id="siteTitleWrap" href="#" target="_blank" rel="noopener"><h1 id="siteTitle">Ворчливый IT-дед</h1></a>
+            <div class="hero-actions">
+              <a id="subscribeBtn" class="subscribe-btn" href="https://t.me/vit_ded" target="_blank" rel="noopener" >Подписаться</a>
+              <a class="icon-btn" href="../../post.html?id=420" aria-label="Открыть динамическую страницу поста">↺</a>
+              <button id="themeToggle" class="icon-btn" type="button" aria-label="Переключить тему"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  
+
+  <main class="container single-page">
+    <article id="postContainer" class="post post-page" data-post-id="420">
+      <div class="post-header">
+        <div class="right"><span class="post-date" data-iso-date="2026-06-11T07:07:55+00:00">2026-06-11 07:07 UTC</span></div>
+      </div>
+      <div class="post-body"><strong>Робо-Лавка</strong> <strong><br></strong><br>Как я <a href="https://t.me/vit_ded/318" rel="nofollow noopener noreferrer">уже упоминал</a>, мы в Лавке активно занимаемся роботизацией наших операционных процессов. Про новости робо-доставки тоже <a href="https://t.me/vit_ded/410" rel="nofollow noopener noreferrer">недавно пробрасывал</a>. А еще у нас идет пилот проекта роботизации даркстора по модели <strong>goods-to-person</strong>. И вправду, зачем персоналу склада бегать между стеллажами, если стеллажи могут подъехать к персоналу сами? Но не все так просто.<br><br>Этот проект мы делаем в тесном сотрудничестве с командой Яндекс Роботикс. Ребята делают классных amr-роботов и rms-систему, глубоко интегрированную с нашей wms. Процесс сложнее, чем можно подумать - задачу <strong>оптимизации</strong> движения десятка+ роботов в ограниченном пространстве с минимизацией времени сборки штучки и неухудшения времени процессинга заказа в целом нужно еще <strong>подружить</strong> с процессами отбора через порталы и работой с пут-воллом.<br><br>С гордостью за ребят могу сказать, что к текущему моменту мы <strong>достигли</strong> отличных показателей сборки заказов! <em>Но это не значит, что можно откинуться в кресле и просто наблюдать, как роботы делают всю работу за нас</em>. Впереди еще тьма сложностей, которые нужно победить для полноценного масштабирования. Например, потому что сборка - лишь один из <strong>десятков</strong> операционных процессов даркстора, и теперь нужно адаптироваться под остальные - оптимизировать процессы размещения, упрощать ротацию товаров и контроль сроков годности, улучшать отбор.<br><br><em>Приведу пример задачи. Робот снизу приподнимает высокий и тяжелый стеллаж. Очень не хотелось бы, чтобы стеллаж мог упасть. А ускорять движение роботво хочется. А где движение - там разгоны и торможения, при которых возникает инерция, которая может привести к заваливанию. Логичное действие - на уровне rms/wms при размещении товара давать задания на размещение тяжелого товара пониже, а легкого - повыше. Но этого тоже недостаточно - стеллажи комплектуются с двух сторон (и отбор идет тоже с двух сторон, робот поворачивается нужным боком), и нужно еще следить за прогнозной оборачиваемостью товара, чтобы не было такого, что с одной стороны стеллажа все разобрали, и другая сторона стала сильно тяжелее, иначе нарушился баланс нагрузки, и снова риск заваливания.</em><br><br>Да и со сборкой мы еще не закончили - нужно повышать стабильность показателей в пиковые часы и работать над аптаймом робо-зоны, продолжать оптимизировать весь процесс и развивать инфру вокруг. Это лишь начало пути. Но уже очень интересно. Кстати, нам можно в этом <strong>помочь</strong> - мы ищем талантливых ребят <a href="https://yandex.ru/jobs/vacancies/pythonrazrabotchik-v-skladskie-operatsii-lavki-38953" rel="nofollow noopener noreferrer">в нашу wms</a>, Роботикс <a href="https://robotics.yandex.ru/career" rel="nofollow noopener noreferrer">тоже нанимает</a>, да и в посте про роботов-доставщиков я не упомянул <a href="https://yandex.ru/jobs/vacancies/razrabotchik-na-s-v-lavku-45097" rel="nofollow noopener noreferrer">вакансию</a>. Откликайтесь или пишите в личку!<div class="media"><video controls preload="metadata" src="../../assets/media/420_amr.mp4"></video></div></div>
+      <div class="actions">
+        <span>176 просмотров · 11 реакций</span>
+        <span class="action-links"><a href="https://t.me/vit_ded/420" target="_blank" rel="noopener">Открыть в Telegram</a> · <a href="../index.html">К списку постов</a> · <a href="./420.html">Ссылка на этот пост</a></span>
+      </div>
+    </article>
+
+    <div class="pager single-nav">
+      <a id="prevPost" class="nav-link disabled" href="#" style="visibility:hidden">← Более новый</a>
+      <a id="nextPost" class="nav-link" href="./419.html" style="visibility:visible">Более старый →</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span>based on <a href="https://github.com/ml-brand/tg-to-gh-pages" target="_blank" rel="noopener">tg-to-gh-pages</a> (created by <a href="https://github.com/ml-brand" target="_blank" rel="noopener">ML Brand</a>)</span>
+        <a id="repoLink" href="https://github.com/ml-brand/tg-to-gh-pages" target="_blank" rel="noopener">Do the same with your channel.</a>
+        <span class="footer-links">
+          static copy ·
+          <a href="../../feed.xml" target="_blank" rel="noopener">RSS</a> ·
+          <a href="../../atom.xml" target="_blank" rel="noopener">Atom</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.__STATIC_POSTS = [{"id": 420, "media": [{"kind": "video", "path": "../../assets/media/420_amr.mp4", "thumb": null, "size": 6490411, "mime": "video/mp4", "name": "amr.mp4"}]}];
+    window.__STATIC_META = {"title": "Ворчливый IT-дед", "username": "vit_ded", "channel": "vit_ded", "last_sync_utc": "2026-06-11T09:54:39Z", "posts_count": 226, "last_seen_message_id": 420, "stats": {"new": 114, "updated": 37, "media_downloaded": 114}, "avatar": "assets/channel_avatar.jpg", "meta_schema_version": "1.0.0", "posts_schema_version": "1.0.0"};
+  </script>
+  <script src="../../common.js"></script>
+  <script src="../../static.js"></script>
+</body>
+</html>
