@@ -53,7 +53,7 @@
       </div>
       <div class="post-body"><strong>Who let the dogs out? Yaff!</strong> <strong><br></strong><br>Если вам надоело греть воздух десериализацией протобуфов, а переписывать все ради FlatBuffers нет сил, этот пост для вас. Недавно Яндекс <a href="https://github.com/yandex/yaff" rel="nofollow noopener noreferrer">выложил в опенсорс исходники YaFF</a> (Yet another Flat Format) - альтернативного wire формата для Protobuf, поддерживающего zero‑copy чтение.<br><br>Для сильных духом есть <a href="https://habr.com/ru/companies/yandex/articles/1047638/" rel="nofollow noopener noreferrer">статья на хабре</a> - там автор рассказывает буквально всю подноготную и объясняет, почему иного пути нет. Но, вкратце, несколько важных тезисов таковы:<br><br>• постоянная трансляция данных между хранилищем, рантаймом и аналитикой - дорого и неудобно (куча конвертеров и цпу-баунд операций);<br>• нельзя забывать про эволюцию форматов (&quot;добавить полюшко&quot; превращается в кросс‑командный квест);<br>• FlatBuffers - это не Protobuf без десериализации (нужно синхронизировать схемы, разные api, ручное перекладывание полей);<br>• источником истины остаётся обычный.proto‑файл, интерфейсная и шаблонная совместимость с Protobuf (дешевое внедрение);<br>• несколько стратегий хранения - flat layout для плотных данных, sparse layout для разреженных, dynamic сам подбирает оптимальный вариант;<br><br>Мы привыкли воспринимать Protobuf‑экосистему как монолит: proto‑схема, wire format и парсинг. YaFF разделяет эти слои. Схемы остаются контрактом между командами и сервисами, а Protobuf‑like API остается привычным интерфейсом для разработчика. Сериализованное представление становится отдельным бэкендом, который можно выбирать под конкретную нагрузку. Это ли не чудо?<div class="media"><img class="media-img" loading="lazy" src="../../assets/media/thumbs/459_480.webp" srcset="../../assets/media/thumbs/459_480.webp 480w, ../../assets/media/459.jpg 1200w" sizes="(max-width: 768px) 100vw, 800px" alt="" data-post-id="459" data-image-index="0" /></div></div>
       <div class="actions">
-        <span>587 просмотров · 11 реакций</span>
+        <span>588 просмотров · 11 реакций</span>
         <span class="action-links"><a href="https://t.me/vit_ded/459" target="_blank" rel="noopener">Открыть в Telegram</a> · <a href="../index.html">К списку постов</a> · <a href="./459.html">Ссылка на этот пост</a></span>
       </div>
     </article>
@@ -80,7 +80,7 @@
 
   <script>
     window.__STATIC_POSTS = [{"id": 459, "media": [{"kind": "photo", "path": "../../assets/media/459.jpg", "thumb": "../../assets/media/thumbs/459_480.webp", "size": 19225, "mime": "image/jpeg", "name": null}]}];
-    window.__STATIC_META = {"title": "Ворчливый IT-дед", "username": "vit_ded", "channel": "vit_ded", "last_sync_utc": "2026-07-21T07:58:39Z", "posts_count": 246, "last_seen_message_id": 470, "stats": {"new": 112, "updated": 35, "media_downloaded": 112}, "avatar": "assets/channel_avatar.jpg", "meta_schema_version": "1.0.0", "posts_schema_version": "1.0.0"};
+    window.__STATIC_META = {"title": "Ворчливый IT-дед", "username": "vit_ded", "channel": "vit_ded", "last_sync_utc": "2026-07-21T10:49:41Z", "posts_count": 246, "last_seen_message_id": 470, "stats": {"new": 112, "updated": 16, "media_downloaded": 112}, "avatar": "assets/channel_avatar.jpg", "meta_schema_version": "1.0.0", "posts_schema_version": "1.0.0"};
   </script>
   <script src="../../common.js"></script>
   <script src="../../static.js"></script>
