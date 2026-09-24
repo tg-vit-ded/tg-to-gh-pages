@@ -2,13 +2,13 @@
   "title": "Ворчливый IT-дед",
   "username": "vit_ded",
   "channel": "vit_ded",
-  "last_sync_utc": "2026-09-24T01:40:01Z",
-  "posts_count": 265,
-  "last_seen_message_id": 572,
+  "last_sync_utc": "2026-09-24T06:46:58Z",
+  "posts_count": 266,
+  "last_seen_message_id": 579,
   "stats": {
-    "new": 127,
-    "updated": 0,
-    "media_downloaded": 127
+    "new": 133,
+    "updated": 25,
+    "media_downloaded": 133
   },
   "avatar": "assets/channel_avatar.jpg",
   "meta_schema_version": "1.0.0",
