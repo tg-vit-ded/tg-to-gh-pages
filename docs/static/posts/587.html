@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ворчливый IT-дед — пост #587</title>
+  <meta name="description" content=" &amp;quot;- Чините?  - Чиним&amp;quot; (цитата из фильма)       Кажется, пришло время объяснить, чем же мы тут последние пару недель так усиленно занимаемся. Не раскрывая всех деталей, попробую дать верхнеур" />
+  <link rel="icon" href="../../favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32.png" />
+  <link rel="apple-touch-icon" href="../../apple-touch-icon.png" />
+
+  <link rel="canonical" href="https://tg-vit-ded.github.io/tg-to-gh-pages/static/posts/587.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Ворчливый IT-дед — пост #587" />
+  <meta property="og:description" content=" &amp;quot;- Чините?  - Чиним&amp;quot; (цитата из фильма)       Кажется, пришло время объяснить, чем же мы тут последние пару недель так усиленно занимаемся. Не раскрывая всех деталей, попробую дать верхнеур" />
+  
+  <meta property="article:published_time" content="2026-10-27T18:30:11+00:00" />
+  <meta property="article:author" content="Ворчливый IT-дед" />
+  <meta name="twitter:card" content="summary" />
+  
+  <link rel="stylesheet" href="../../style.css" />
+  <script src="../../metrika.js"></script>
+</head>
+<body data-index-href="../index.html">
+  <header class="header">
+    <div class="container">
+      <div class="title-grid single-title">
+        <a class="grid-avatar" href="#" target="_blank" rel="noopener">
+          <img id="channelAvatar" class="channel-avatar" src="../../assets/channel_avatar.jpg" alt="Аватар канала"  />
+        </a>
+        <div class="grid-main">
+          <div class="title-head">
+            <a class="back-link" href="../index.html">← Ко всем постам</a>
+            <a class="badge-chip" id="siteTitleWrap" href="#" target="_blank" rel="noopener"><h1 id="siteTitle">Ворчливый IT-дед</h1></a>
+            <div class="hero-actions">
+              <a id="subscribeBtn" class="subscribe-btn" href="https://t.me/vit_ded" target="_blank" rel="noopener" >Подписаться</a>
+              <a class="icon-btn" href="../../post.html?id=587" aria-label="Открыть динамическую страницу поста">↺</a>
+              <button id="themeToggle" class="icon-btn" type="button" aria-label="Переключить тему"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  
+
+  <main class="container single-page">
+    <article id="postContainer" class="post post-page" data-post-id="587">
+      <div class="post-header">
+        <div class="right"><span class="post-date" data-iso-date="2026-10-27T18:30:11+00:00">2026-10-27 18:30 UTC</span></div>
+      </div>
+      <div class="post-body"><strong>&quot;- Чините?  - Чиним&quot; (цитата из фильма)</strong>  <strong><br></strong><br>Кажется, пришло время объяснить, чем же мы тут последние пару недель так усиленно занимаемся. Не раскрывая всех деталей, попробую дать верхнеуровневое представление, почему &quot;это вам не хухры-мухры&quot;.<br><br>Для начала обрисую, из чего состоит Лавка технически. У нас микросервисная архитектура. <em>Ну как микросервисная, некоторые сервисы больше похожи на монолиты, но их так дофига, что на общем фоне даже они - микро.</em> Всего сервисов порядка 400 штук на <strong>десятках тысяч процессорных ядер</strong>. Большинство сервисов крутится в облачной распрелеленной инфре. Есть и ряд специфичных систем, которым нужно особое железо, либо сетевая специфика. Почти у каждого сервиса есть база данных, у ряда сервисов - сразу несколько баз разных типов. Базы - тоже облачные, managed, на нескольких &quot;ногах&quot;. Есть огромный map-reduce кластер для dwh, аналитики, работы с большими данными, ёмких вычислений и алгоритмики. <em>И еще куча разношерстной марохайки, про которую в обычной жизни вспоминаешь, только когда сломается.</em><br><br>И до тех пор, пока у тебя все это стройно и связно работает, крепко стоит на ногах, подкреплено достаточным количеством вычислительных ресурсов - все хорошо. Разумеется, мы много лет проводим учения по отключению дата-центров и заготавливаем солому. Все эти упражнения однозначно сильно помогли. Разумеется, все системы и данные многократно зарезервированы и забекаплены. <em>Но х20 не зарезервируешься - это и экономически нецелесообразно, и эксплуатационно адово.<br></em><br>Вообще, все, что я писал в постах о <a href="https://t.me/vit_ded/67" rel="nofollow noopener noreferrer">надежности</a> - не пустой звук. Нам немало помогли и <a href="https://t.me/vit_ded/74" rel="nofollow noopener noreferrer">нагрузочное тестирование</a>, и <a href="https://t.me/vit_ded/75" rel="nofollow noopener noreferrer">bdui</a>, и подходы <a href="https://t.me/vit_ded/83" rel="nofollow noopener noreferrer">архитектурного ревью</a>, <a href="https://t.me/vit_ded/84" rel="nofollow noopener noreferrer">учения</a>, <a href="https://t.me/vit_ded/87" rel="nofollow noopener noreferrer">обзервабилити</a>, <a href="https://t.me/vit_ded/92" rel="nofollow noopener noreferrer">тыквы</a>, и многое другое, о чем старые читатели этого канала могли порой думать <em>&quot;да зачем оно надо&quot;</em>.<br><br>Что же произошло, когда мы за короткий срок временно потеряли доступность существенной части мощностей? Вся эта развесистая система лишилась избыточного уровня резервирования и подкрепления мощностями количественно. Кворумные системы такое не любят, но были готовы. Автофейловер - отдельный вид искусства. Ядер попросту не хватало. Многие первым делом спрашивали, потеряли ли данные. Нет, <strong>критичные данные не потеряли</strong> благодаря хорошим системам репликаций и бекапирования. В большей степени у нас страдал стейтлесс-рантайм. Важно, чтобы контрол-плейн системы и обзервабилити оставались в строю, без глаз и без рук восстанавливаться категорически сложнее. <br><br>Первым делом надо было восстановить <strong>базовую</strong> работоспособность сервиса и бизнеса. Дальше - <strong>жонглируешь</strong> ресурсами, вывозя основные системы практически на руках. Но кроме обработки пользовательских запросов есть еще море операционных бизнес-процессов, которые нужно было удержать на плаву.<br><br>Следующая задача - подготовить <strong>компактные</strong> версии систем, которым нужно меньше мощностей. В ход пошли самые креативные способы нашакалить вычислительные ресурсы там, где их еще не искали, создать микро-версии систем, способные запускаться на <strong>микроволновке</strong>, изолировать зависимости от почти любой инфраструктуры, которая ранее считалась базовой.</div>
+      <div class="actions">
+        <span>238 просмотров · 16 реакций</span>
+        <span class="action-links"><a href="https://t.me/vit_ded/587" target="_blank" rel="noopener">Открыть в Telegram</a> · <a href="../index.html">К списку постов</a> · <a href="./587.html">Ссылка на этот пост</a></span>
+      </div>
+    </article>
+
+    <div class="pager single-nav">
+      <a id="prevPost" class="nav-link" href="./588.html" style="visibility:visible">← Более новый</a>
+      <a id="nextPost" class="nav-link" href="./586.html" style="visibility:visible">Более старый →</a>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span>based on <a href="https://github.com/ml-brand/tg-to-gh-pages" target="_blank" rel="noopener">tg-to-gh-pages</a> (created by <a href="https://github.com/ml-brand" target="_blank" rel="noopener">ML Brand</a>)</span>
+        <a id="repoLink" href="https://github.com/ml-brand/tg-to-gh-pages" target="_blank" rel="noopener">Do the same with your channel.</a>
+        <span class="footer-links">
+          static copy ·
+          <a href="../../feed.xml" target="_blank" rel="noopener">RSS</a> ·
+          <a href="../../atom.xml" target="_blank" rel="noopener">Atom</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.__STATIC_POSTS = [{"id": 587, "media": []}];
+    window.__STATIC_META = {"title": "Ворчливый IT-дед", "username": "vit_ded", "channel": "vit_ded", "last_sync_utc": "2026-10-27T21:29:57Z", "posts_count": 274, "last_seen_message_id": 588, "stats": {"new": 132, "updated": 27, "media_downloaded": 130}, "avatar": "assets/channel_avatar.jpg", "meta_schema_version": "1.0.0", "posts_schema_version": "1.0.0"};
+  </script>
+  <script src="../../common.js"></script>
+  <script src="../../static.js"></script>
+</body>
+</html>
